@@ -1,0 +1,28 @@
+plugins {
+    id("java")
+}
+
+group = "org.example"
+version = "1.0-SNAPSHOT"
+
+repositories {
+    mavenCentral()
+}
+
+compileJava.options.encoding = 'UTF-8'
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+    testImplementation 'io.cucumber:cucumber-java:7.1.0'
+    testImplementation 'com.codeborne:selenide:7.0.2'
+    testImplementation 'io.cucumber:cucumber-junit:7.1.0'
+}
+
+tasks.test {
+    useJUnitPlatform()
+}
