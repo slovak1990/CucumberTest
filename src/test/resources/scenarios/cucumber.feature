@@ -16,7 +16,7 @@ Feature: Negative tests
     When I click "1" time on plus button in slider "Term"
     Then I see error "This term is available to repeat borrowers only" under "term" slider
 
-  Scenario: Is error exist after wrong value in Full Name field
+  Scenario: Is error exist after wrong value in Mobile Phone field
     When I set value "Ivan" in field "first_name"
     When I set value "Ivanovich" in field "middle_initial"
     When I set value "Ivanov" in field "last_name"
